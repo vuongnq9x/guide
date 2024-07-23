@@ -68,18 +68,32 @@ echo 'extension=oci8.so' | sudo tee -a /etc/php/8.1/fpm/php.ini
 ```
 
 ### Xác nhận việc cài đặt thành công
+> Khởi động lại PHP
 ```bash
 sudo service php8.1-fpm restart
-php -v
-# PHP 8.1.29 (cli) (built: Jun  6 2024 16:53:54) (NTS)
-#Copyright (c) The PHP Group
-#Zend Engine v4.1.29, Copyright (c) Zend Technologies
-#    with Zend OPcache v8.1.29, Copyright (c), by Zend Technologies
+```
 
+> Kiểm tra vesion
+```bash
+php -v
+```
+Output:
+```bash
+ PHP 8.1.29 (cli) (built: Jun  6 2024 16:53:54) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.1.29, Copyright (c) Zend Technologies
+    with Zend OPcache v8.1.29, Copyright (c), by Zend Technologies
+```
+
+> Kiểm tra extension
+```bash
 php -m
-#...
-#oci8
-#...
-#PDO_OCI
-#...
+```
+Output:
+```
+...
+oci8
+...
+PDO_OCI
+...
 ```
