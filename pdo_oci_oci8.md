@@ -21,7 +21,7 @@ sudo apt unzip -A instantclient-sdk-linux.x64-23.4.0.24.05.zip
 sudo apt unzip -A instantclient-sqlplus-linux.x64-23.4.0.24.05.zip
 sudo apt unzip -A instantclient-basic-linux.x64-23.4.0.24.05.zip
 
-echo "hello" | sudo tee /etc/ld.so.conf.d/oracle-insantclient.conf
+echo /opt/oracle/instantclient_23_4 | sudo tee /etc/ld.so.conf.d/oracle-insantclient.conf
 sudo ldconfig
 
 # Xóa các file zip nếu muốn
